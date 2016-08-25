@@ -2,11 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
+body.main {
   background-image: image_url("paper_texture293.png");
 }
 
 .header {
   margin-top: 20%;
   margin-left: 40%;
+}
+
+.linkToClass {
+  color: black;
 }

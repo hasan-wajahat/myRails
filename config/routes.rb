@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'main#index'
+
   get 'rails_home/index'
 
   get 'main/index'
