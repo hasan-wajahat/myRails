@@ -10,6 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160827112945) do
+
+  create_table "recipes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "recipe_name", limit: 50
+    t.string   "category",    limit: 25
+    t.integer  "chef_id"
+    t.text     "ingredients", limit: 65535
+    t.text     "recipe",      limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.index ["recipe_name", "category", "chef_id"], name: "index_recipes_on_recipe_name_and_category_and_chef_id", using: :btree
+  end
 
 end
